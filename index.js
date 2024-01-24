@@ -13,6 +13,7 @@ const CLIENT_PORT =
   cp_index !== -1 ? args[cp_index + 1] : process.env.CLIENT_PORT || 3000;
 
 const app = express();
+console.log(CLIENT_PORT);
 app.use(
   cors({
     origin: `http://localhost:${CLIENT_PORT}`,
