@@ -2,7 +2,7 @@ version: '3'
 services:
   backend:
     build:
-      context: /Users/yuliaantsybor/dofd-05-yuliia-antsybor/
+      context: .
       dockerfile: Dockerfile
     ports:
       - "5001:5001"
@@ -13,8 +13,8 @@ services:
 
   frontend:
     build:
-      context: /Users/yuliaantsybor/dofd-05-yuliia-antsybor/
-      dockerfile: Dockerfile
+     context: .
+    dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
