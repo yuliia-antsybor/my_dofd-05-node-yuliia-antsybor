@@ -1,14 +1,21 @@
 version: '3'
-
 services:
-  frontend:
-    build:
-      context: ./frontend
-    ports:
-      - "3000:3000"
-
   backend:
     build:
-      context: ./backend
+      context: /Users/yuliaantsybor/dofd-05-yuliia-antsybor/
+      dockerfile: Dockerfile
     ports:
       - "5001:5001"
+    environment:
+      - PORT=5001
+    volumes:
+      - /Users/yuliaantsybor/dofd-05-yuliia-antsybor/:/app
+
+  frontend:
+    build:
+      context: /Users/yuliaantsybor/dofd-05-yuliia-antsybor/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - /Users/yuliaantsybor/dofd-05-yuliia-antsybor/:/app
