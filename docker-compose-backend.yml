@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: /Users/yuliaantsybor/dofd-05-node-yuliia-antsybor/docker-compose-backend.yml
+    ports:
+      - "5001:5001"
+    environment:
+      - BACKEND_URL=https://github.com/devops-fundamentals-templates/dofd-05-node-yuliia-antsybor/blob/505c13d991ffe0ad03344ef559c228873736086e/softserve.db
