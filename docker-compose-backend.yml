@@ -4,6 +4,6 @@ services:
   backend:
     build:
       context: .
-      dockerfile: /Users/yuliaantsybor/dofd-05-node-yuliia-antsybor/Dockerfile.backend
+      dockerfile: Dockerfile.backend
     ports:
-      - "3000:3000"
+      - "5001:5001"
