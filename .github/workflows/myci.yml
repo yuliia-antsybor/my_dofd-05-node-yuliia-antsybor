@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - jenk
 
   workflow_dispatch:
 
