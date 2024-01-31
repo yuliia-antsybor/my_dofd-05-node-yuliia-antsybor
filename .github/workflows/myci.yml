@@ -2,10 +2,10 @@
 uses: actions/setup-node@v3
 with:
 node-version: 16
-- name: Checkout frontend from develop branch
+- name: Checkout frontend from main branch
 uses: actions/checkout@v3
 with:
-repository: ita-social-projects/TeachUAClient
-ref: develop
+repository: devops-fundamentals-templates
+ref: jenk
 - name: Install dependencies
 run: "npm install --legacy-peer-deps"
