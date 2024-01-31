@@ -1,11 +1,33 @@
-- name: Use custom node version
-uses: actions/setup-node@v3
-with:
-node-version: 16
-- name: Checkout frontend from develop branch
-uses: actions/checkout@v3
-with:
-repository: ita-social-projects/TeachUAClient
-ref: develop
-- name: Install dependencies
-run: "npm install --legacy-peer-deps"
+name: CI/CD yuliaWorkflow
+
+on:
+  push:
+    branches:
+      - jenk
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Run Unit Tests
+        run: npm test
