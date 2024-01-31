@@ -3,7 +3,7 @@ name: CI/CD yuliaWorkflow
 on:
   push:
     branches:
-      - jenk
+      - main
 
   workflow_dispatch:
 
