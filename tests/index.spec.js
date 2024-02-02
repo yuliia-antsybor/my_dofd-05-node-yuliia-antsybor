@@ -3,3 +3,5 @@ describe('stub', () => {
     expect(true).toBe(true);
   });
 });
+
+//simple test template finded on internet
